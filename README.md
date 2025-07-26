@@ -1,7 +1,7 @@
-mjpg-streamer
+wipi64-mjpg-streamer
 =============
 
-This is a fork of http://sourceforge.net/projects/mjpg-streamer/ with added support for the Raspberry Pi camera via the input_raspicam plugin.
+Fork of http://sourceforge.net/projects/mjpg-streamer/ adding the necessary endpoint used by camera inside Sega Triforce's Mario Kart Arcade GP and Mario Kart Arcade GP 2 games.
 
 mjpg-streamer is a command line application that copies JPEG frames from one
 or more input plugins to multiple output plugins. It can be used to stream
@@ -50,7 +50,7 @@ Building & Installation
 You must have cmake installed. You will also probably want to have a development
 version of libjpeg installed. I used libjpeg8-dev. e.g.
 
-    sudo apt-get install cmake libjpeg8-dev
+    sudo apt-get install cmake llibjpeg62-turbo-dev (ibjpeg8-dev in older linux versions)
 
 If you do not have gcc (and g++ for the opencv plugin) you may need to install those.
 

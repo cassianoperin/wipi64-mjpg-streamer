@@ -1075,6 +1075,17 @@ void *client_thread(void *arg)
             query_suffixed = 0;
         }
         #endif
+    } else if(strstr(buffer, "GET /img.jpg") != NULL) {
+        req.type = A_SNAPSHOT;
+        query_suffixed = 255;
+        #ifdef MANAGMENT
+        if (check_client_status(lcfd.client)) {
+            req.type = A_UNKNOWN;
+            lcfd.client->last_take_time.tv_sec += piggy_fine;
+            send_error(lcfd.fd, 403, "frame already sent");
+            query_suffixed = 0;
+        }
+        #endif
     #ifdef WXP_COMPAT
     } else if((strstr(buffer, "GET /cam") != NULL) && (strstr(buffer, ".jpg") != NULL)) {
         req.type = A_SNAPSHOT_WXP;
