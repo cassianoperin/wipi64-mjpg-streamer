@@ -3,6 +3,10 @@ wipi64-mjpg-streamer
 
 Fork of http://sourceforge.net/projects/mjpg-streamer/ adding the necessary endpoint used by camera inside Sega Triforce's Mario Kart Arcade GP and Mario Kart Arcade GP 2 games.
 
+
+mjpg-streamer
+=============
+
 mjpg-streamer is a command line application that copies JPEG frames from one
 or more input plugins to multiple output plugins. It can be used to stream
 JPEG files over an IP-based network from a webcam to various types of viewers
